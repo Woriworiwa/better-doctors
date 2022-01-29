@@ -17,6 +17,6 @@ export class DoctorListItemComponent implements OnInit {
   }
 
   onSelected() {    
-    this.doctorsService.doctorSelected.emit(this.doctor);
+    this.doctorsService.doctorSelected.emit(this.doctor);    
   }
 }
