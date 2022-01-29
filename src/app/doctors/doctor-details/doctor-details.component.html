@@ -1,1 +1,129 @@
-{{doctor.name}}
+<div class="details-container">
+    <div class="container card card-body">
+        <div class="card-header">
+            Basic information
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-4">
+                    Name:
+                </div>
+                <div class="col-8">
+                    {{doctor.name}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Username:
+                </div>
+                <div class="col-8">
+                    {{doctor.username}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Email:
+                </div>
+                <div class="col-8">
+                    {{doctor.email}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Phone:
+                </div>
+                <div class="col-8">
+                    {{doctor.phone}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Website:
+                </div>
+                <div class="col-8">
+                    {{doctor.website}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container card card-body">
+        <div class="card-header">
+            Address
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-4">
+                    Street:
+                </div>
+                <div class="col-8">
+                    {{doctor.address.street}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Suite:
+                </div>
+                <div class="col-8">
+                    {{doctor.address.suite}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    City:
+                </div>
+                <div class="col-8">
+                    {{doctor.address.city}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Zip Code:
+                </div>
+                <div class="col-8">
+                    {{doctor.address.zipcode}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Geo. Location:
+                </div>
+                <div class="col-8">
+                    {{doctor.address.geo.lat}}, {{doctor.address.geo.lng}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container card card-body">
+        <div class="card-header">
+            Company
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-4">
+                    Name:
+                </div>
+                <div class="col-8">
+                    {{doctor.company.name}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Catch Phrase:
+                </div>
+                <div class="col-8">
+                    {{doctor.company.catchPhrase}}
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    Big Slogan:
+                </div>
+                <div class="col-8">
+                    {{doctor.company.bs}}
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

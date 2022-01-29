@@ -12,6 +12,5 @@ export class DoctorDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {    
-  }
-
+  }  
 }

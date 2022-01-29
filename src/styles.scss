@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    //TODO: Remove !important. Investigate how to change bootstrap colors for Angular
+    background-color: #f3f3f3 !important ;
+}
