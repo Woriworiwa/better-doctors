@@ -10,6 +10,8 @@ import { DoctorDetailsComponent } from './doctors/doctor-details/doctor-details.
 import { DoctorListItemComponent } from './doctors/doctor-list/doctor-list-item/doctor-list-item.component';
 import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { TodoListItemComponent } from './todos/todo-list/todo-list-item/todo-list-item.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { TabsComponent } from './navigation/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TodoListItemComponent } from './todos/todo-list/todo-list-item/todo-lis
     DoctorListItemComponent,
     DoctorDetailsComponent,    
     TodoListComponent,
-    TodoListItemComponent
+    TodoListItemComponent,
+    HeaderComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

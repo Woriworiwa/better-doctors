@@ -15,7 +15,7 @@ export class TodoListComponent implements OnInit {
   constructor(private doctorsService: DoctorsService) { }
 
   ngOnInit(): void {
-    this.doctorsService.doctorSelected.subscribe(doctor => {
+    this.doctorsService.doctorSelected.subscribe(doctor => {      
       this.doctor = doctor;
       this.doctorsService.fetchTasks(doctor.id).subscribe(todos => {
         this.todos = todos;

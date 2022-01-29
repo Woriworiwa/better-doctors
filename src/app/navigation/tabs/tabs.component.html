@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="selectedTab===navigationTabs.details" href="#" (click)="onSelect(navigationTabs.details)">Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="selectedTab===navigationTabs.todo" href="#" (click)="onSelect(navigationTabs.todo)">To Do</a>
+    </li>                
+  </ul>

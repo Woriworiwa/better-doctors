@@ -8,7 +8,7 @@ import { ToDo } from "../models/todo.model";
 
 @Injectable({ providedIn: 'root' })
 export class DoctorsService {
-  doctorSelected = new EventEmitter<Doctor>();
+  doctorSelected = new EventEmitter<Doctor>();  
 
   constructor(private http: HttpClient) { }
 

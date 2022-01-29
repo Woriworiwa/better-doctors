@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {map} from 'rxjs/operators';
 import { Doctor } from './models/doctor.model';
 import { DoctorsService } from './services/doctors.service';
+import { NavigationTabs } from './models/enums';
 
 
 @Component({
@@ -12,6 +13,8 @@ import { DoctorsService } from './services/doctors.service';
 
 export class AppComponent {  
   selectedDoctor: Doctor = {} as Doctor;
+  selectedTab: NavigationTabs = NavigationTabs.details;
+  navigationTabs = NavigationTabs;
 
   constructor(private doctorService: DoctorsService) { }
 
@@ -21,6 +24,10 @@ export class AppComponent {
         this.selectedDoctor = doctor;
       }
     )
+  }
+
+  onTabNavigate(tab: NavigationTabs) {    
+    this.selectedTab = tab;
   }
 }
 
