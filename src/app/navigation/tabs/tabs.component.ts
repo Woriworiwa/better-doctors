@@ -6,13 +6,14 @@ import {NavigationTabs} from '../../models/enums';
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss']
 })
+
 export class TabsComponent{
   @Output() tabSelected = new EventEmitter<NavigationTabs>();
   selectedTab: NavigationTabs = NavigationTabs.details;
   navigationTabs = NavigationTabs;
   
   onSelect(tab: NavigationTabs) {  
-    this.selectedTab = tab;
+    this.selectedTab = tab;    
     this.tabSelected.emit(tab);
   }
 }
