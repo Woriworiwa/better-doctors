@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/better-doctors",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
