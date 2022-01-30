@@ -1,3 +1,3 @@
-<ul class="list-group todo-list">  
+<ul class="list-group todo-list" *ngIf="doctor && doctor.id">  
   <app-todo-list-item *ngFor="let todo of todos" [todo]="todo"></app-todo-list-item>
 </ul>

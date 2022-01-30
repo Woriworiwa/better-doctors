@@ -1,7 +1,4 @@
-<h1 *ngIf="doctor && doctor.name; else selectDoctor">{{doctor.name}}</h1>
-<ng-template #selectDoctor><h1>Select a doctor to get started!</h1></ng-template>
-
-<ul class="nav nav-tabs">    
+<ul class="nav nav-tabs" *ngIf="doctor && doctor.id; else selectDoctor">
     <li class="nav-item">
       <a class="nav-link" [class.active]="selectedTab===navigationTabs.todo" href="#" (click)="onSelect(navigationTabs.todo)">To Do</a>
     </li>
@@ -9,3 +6,5 @@
       <a class="nav-link" [class.active]="selectedTab===navigationTabs.details" href="#" (click)="onSelect(navigationTabs.details)">Details</a>
     </li>
 </ul>
+
+<ng-template #selectDoctor><h1>Select a doctor to get started!</h1></ng-template>

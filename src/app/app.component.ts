@@ -12,6 +12,7 @@ import { NavigationTabs } from './models/enums';
 })
 
 export class AppComponent {  
+  title: string = 'better-doctors';
   selectedDoctor: Doctor = {} as Doctor;
   selectedTab: NavigationTabs = NavigationTabs.todo;
   

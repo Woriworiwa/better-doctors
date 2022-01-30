@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Doctor } from '../../models/doctor.model';
 import { DoctorsService } from '../../services/doctors.service';
@@ -9,7 +9,8 @@ import { DoctorsService } from '../../services/doctors.service';
   styleUrls: ['./doctor-list.component.scss']
 })
 export class DoctorListComponent implements OnInit {
-  doctors: Doctor[] = [];    
+  doctors: Doctor[] = [];      
+  @Input() doctor: Doctor = {} as Doctor;  
 
   constructor(private http:HttpClient, private doctorsService: DoctorsService){    
     this.doctorsService.fetchDoctors().subscribe(doctors =>{      

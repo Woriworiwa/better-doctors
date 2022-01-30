@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5">            
-            <app-doctor-list></app-doctor-list>
+            <app-doctor-list [doctor]="selectedDoctor"></app-doctor-list>
         </div>
         <div class="col-md-7">            
             <app-tabs [doctor]="selectedDoctor" (tabSelected)="onTabNavigate($event)"></app-tabs>
