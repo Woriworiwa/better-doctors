@@ -2,13 +2,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5">            
             <app-doctor-list></app-doctor-list>
         </div>
-        <div class="col-md-7">
-            <app-tabs (tabSelected)="onTabNavigate($event)"></app-tabs>
-            <app-doctor-details [doctor]="selectedDoctor" [hidden]="selectedTab !== navigationTabs.details"></app-doctor-details>
+        <div class="col-md-7">            
+            <app-tabs [doctor]="selectedDoctor" (tabSelected)="onTabNavigate($event)"></app-tabs>
             <app-todo-list [doctor]="selectedDoctor" [hidden]="selectedTab !== navigationTabs.todo"></app-todo-list>
+            <app-doctor-details [doctor]="selectedDoctor" [hidden]="selectedTab !== navigationTabs.details"></app-doctor-details>            
         </div>
     </div>
 </div>

@@ -13,7 +13,9 @@ import { NavigationTabs } from './models/enums';
 
 export class AppComponent {  
   selectedDoctor: Doctor = {} as Doctor;
-  selectedTab: NavigationTabs = NavigationTabs.details;
+  selectedTab: NavigationTabs = NavigationTabs.todo;
+  
+  //expose the enum so you can access it in html TODO: Think about a way to make enums globally with no explicit delcaring
   navigationTabs = NavigationTabs;
 
   constructor(private doctorService: DoctorsService) { }
