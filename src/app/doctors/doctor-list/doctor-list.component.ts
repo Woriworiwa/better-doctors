@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Doctor } from '../../models/doctor.model';
 import { DoctorsService } from '../../services/doctors.service';
 
@@ -12,7 +11,7 @@ export class DoctorListComponent implements OnInit {
   doctors: Doctor[] = [];      
   @Input() doctor: Doctor = {} as Doctor;  
 
-  constructor(private http:HttpClient, private doctorsService: DoctorsService){    
+  constructor(private doctorsService: DoctorsService){    
     this.doctorsService.fetchDoctors().subscribe(doctors =>{      
       this.doctors = doctors;
     }, error => {

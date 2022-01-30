@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoListItemComponent } from './todo-list-item.component';
 
-describe('TaskListDetailsComponent', () => {
+describe('TodoListDetailsComponent', () => {
   let component: TodoListItemComponent;
   let fixture: ComponentFixture<TodoListItemComponent>;
 

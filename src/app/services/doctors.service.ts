@@ -9,14 +9,14 @@ import { ToDo } from "../models/todo.model";
 @Injectable({ providedIn: 'root' })
 export class DoctorsService {
   doctorSelected = new EventEmitter<Doctor>();  
-
+  url: string = 'https://jsonplaceholder.typicode.com';
   constructor(private http: HttpClient) { }
 
   fetchDoctors() {
-    return this.http.get<Doctor[]>('https://jsonplaceholder.typicode.com/users')
+    return this.http.get<Doctor[]>(`${this.url}/users`)
   }
 
   fetchTasks(doctorId: number) {
-    return this.http.get<ToDo[]>(`https://jsonplaceholder.typicode.com/users/${doctorId}/todos`)
+    return this.http.get<ToDo[]>(`${this.url}/users/${doctorId}/todos`)
   }
 }
