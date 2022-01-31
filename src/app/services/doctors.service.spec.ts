@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 
 // Other imports
 import { TestBed } from '@angular/core/testing';
-import { mockDoctorsArray } from '../../mocks/Doctor';
+import { mockDoctorsArray } from '../../mocks/doctor';
 import { mockTodoArray } from '../../mocks/todo';
 import { DoctorsService } from './doctors.service';
 
