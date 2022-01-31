@@ -1,3 +1,15 @@
-<ul class="list-group todo-list" *ngIf="doctor && doctor.id">  
-  <app-todo-list-item *ngFor="let todo of todos" [todo]="todo"></app-todo-list-item>
+<ul class="list-group todo-list" *ngIf="doctor && doctor.id">
+  <ng-container *ngIf="!isLoading; else loadingIndicator">
+    <app-todo-list-item *ngFor="let todo of todos" [todo]="todo"></app-todo-list-item>
+  </ng-container>
 </ul>
+
+<ng-template #loadingIndicator>
+  <div class="d-flex justify-content-center">
+    <div class="loadingio-spinner-eclipse-pgzv1iyoavg">
+      <div class="ldio-dqrvjbtqjz">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</ng-template>

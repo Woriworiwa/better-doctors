@@ -11,14 +11,17 @@ import { DoctorsService } from 'src/app/services/doctors.service';
 export class TodoListComponent implements OnInit {
   @Input() doctor: Doctor = {} as Doctor;
   todos: ToDo[] = [];
+  isLoading = false;
 
   constructor(private doctorsService: DoctorsService) { }
 
   ngOnInit(): void {
     this.doctorsService.doctorSelected.subscribe(doctor => {      
       this.doctor = doctor;
+      this.isLoading = true;
       this.doctorsService.fetchTasks(doctor.id).subscribe(todos => {
         this.todos = todos;
+        this.isLoading = false;
       })
     })
   }
